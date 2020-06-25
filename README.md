@@ -30,3 +30,5 @@ Mostly for convenience, you can use Infura to access an Ethereum node without ha
 Once you've signed up, your Infura RPC URL should look like this:
 
 https://mainnet.infura.io/YOUR_INFURA_API_KEY
+
+***Now that all of your dependencies are installed, you can start developing with Web3.js!***
