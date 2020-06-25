@@ -10,3 +10,14 @@ Web3.js talks to The Ethereum Blockchain with JSON RPC, which stands for "Remote
 
 you can find more details on web3 [here.](https://web3js.readthedocs.io/en/v1.2.9/) 
 [npm packages](https://www.npmjs.com/package/web3)
+
+## Dependencies
+There are a few dependencies that will help you start developing with Web3.js.
+
+Node Package Manager (NPM)
+The first dependency we need is Node Package Manager, or NPM, which comes with Node.js. You can see if you have node already installed by going to your termial and typing:
+`$ node -v`
+> Web3.js Library
+You can install the Web3.js library with NPM in your terminal like this:
+
+`$ npm install web3`
