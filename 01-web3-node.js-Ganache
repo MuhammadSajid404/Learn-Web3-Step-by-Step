@@ -2,13 +2,14 @@
 const Web3 = require('web3');
 
 //assign URL to a variable
-//using Ganache 
+//using local blockchain 'Ganache 
 const rpcURL = "http://127.0.0.1:7545";
 
 //creating a connection
 const web3 = new Web3(rpcURL);
 
 //set address to check balance
+//Ganache BC account address
 const address = "0x8cE65e49c20D5286e76b54a869239923BC1325D8";
 
 web3.eth.getBalance(address, (err, wei) => {
