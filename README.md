@@ -17,7 +17,7 @@ There are a few dependencies that will help you start developing with Web3.js.
 Node Package Manager (NPM)
 The first dependency we need is Node Package Manager, or NPM, which comes with Node.js. You can see if you have node already installed by going to your termial and typing:
 `$ node -v`
-> Web3.js Library
-You can install the Web3.js library with NPM in your terminal like this:
 
+Web3.js Library
+You can install the Web3.js library with NPM in your terminal like this:
 `$ npm install web3`
