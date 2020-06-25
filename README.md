@@ -35,9 +35,9 @@ https://mainnet.infura.io/YOUR_INFURA_API_KEY
 
 ### CONCLUSION
 1. First check balance of account on local blockchain Ganache [01-web3-node.js-Ganache](https://github.com/sajidsultan/Learn-Web3-Step-by-Step/blob/master/01-web3-node.js-Ganache)
-2. Check account balance with infura for ropsten test net in browser
-3. Check account balance with infura for ropsten test net in node.js
-4. Only read contract data from blockchain
-5. Send ether from one account to another using web3 and node.js
-6. Write data to blockchain using node.js
-7. Deploye contract to blockchain using node.js
+2. Check account balance with infura for ropsten test net in browser [02-Web3.js-Browser-Infura](https://github.com/sajidsultan/Learn-Web3-Step-by-Step/blob/master/02-Web3.js-Browser-Infura)
+3. Check account balance with infura for ropsten test net in node.js [03-web3-node.js-Infura](https://github.com/sajidsultan/Learn-Web3-Step-by-Step/blob/master/03-web3-node.js-Infura)
+4. Only read contract data from blockchain [04-Web3.js-node.js-contractReadData](https://github.com/sajidsultan/Learn-Web3-Step-by-Step/blob/master/04-Web3.js-node.js-contractReadData)
+5. Send ether from one account to another using web3 and node.js [05-web3.js-createTransaction](https://github.com/sajidsultan/Learn-Web3-Step-by-Step/blob/master/05-web3.js-createTransaction)
+6. Write data to blockchain using node.js[06-web3.js-transactionCallContractFunction](https://github.com/sajidsultan/Learn-Web3-Step-by-Step/blob/master/06-web3.js-transactionCallContractFunction)
+7. Deploye contract to blockchain using node.js [07-web3.js-contractDeployement-node.js](https://github.com/sajidsultan/Learn-Web3-Step-by-Step/blob/master/07-web3.js-contractDeployement-node.js)
