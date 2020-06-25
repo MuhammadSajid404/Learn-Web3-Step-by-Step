@@ -14,15 +14,15 @@ you can find more details on web3 [here.](https://web3js.readthedocs.io/en/v1.2.
 ## Dependencies
 There are a few dependencies that will help you start developing with Web3.js.
 
-Node Package Manager (NPM)  
+**Node Package Manager (NPM)**  
 The first dependency we need is Node Package Manager, or NPM, which comes with Node.js. You can see if you have node already installed by going to your termial and typing:
 `$ node -v`
 
-Web3.js Library  
+**Web3.js Library**  
 You can install the Web3.js library with NPM in your terminal like this:
 `$ npm install web3`
 
-Infura RPC URL  
+**Infura RPC URL**  
 In order to connect to an Ethereum node with JSON RPC on the Main Net or Test Net, we need access to an Ethereum node. There are a few ways you could do this. For one, you could run your own Ethereum node with Geth or Parity.
 
 Mostly for convenience, you can use Infura to access an Ethereum node without having to run one yourself. Infura is a service that provides a remote Ethereum node for free. All you need to do is sign up and obtain an API key and the RPC URL for the network you want to connect to.
