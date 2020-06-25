@@ -34,7 +34,7 @@ https://mainnet.infura.io/YOUR_INFURA_API_KEY
 ***Now that all of your dependencies are installed, you can start developing with Web3.js!***
 
 ### CONCLUSION
-1. First check balance of account on local blockchain Ganache 
+1. First check balance of account on local blockchain Ganache [01-web3-node.js-Ganache](https://github.com/sajidsultan/Learn-Web3-Step-by-Step/blob/master/01-web3-node.js-Ganache)
 2. Check account balance with infura for ropsten test net in browser
 3. Check account balance with infura for ropsten test net in node.js
 4. Only read contract data from blockchain
