@@ -32,3 +32,12 @@ Once you've signed up, your Infura RPC URL should look like this:
 https://mainnet.infura.io/YOUR_INFURA_API_KEY
 
 ***Now that all of your dependencies are installed, you can start developing with Web3.js!***
+
+### CONCLUSION
+1. First check balance of account on local blockchain Ganache 
+2. Check account balance with infura for ropsten test net in browser
+3. Check account balance with infura for ropsten test net in node.js
+4. Only read contract data from blockchain
+5. Send ether from one account to another using web3 and node.js
+6. Write data to blockchain using node.js
+7. Deploye contract to blockchain using node.js
