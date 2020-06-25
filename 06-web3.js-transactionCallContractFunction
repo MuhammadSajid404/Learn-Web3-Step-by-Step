@@ -1,0 +1,117 @@
+// require the newly installed tx library
+var Tx = require('ethereumjs-tx');
+
+// set up a Web3 connection
+const Web3 = require('web3')
+const web3 = new Web3('https://ropsten.infura.io/v3/f1d63286d3764c0388bf0c284b7e0137');
+
+// assign account to variable
+const account = "0x6fe382e5A03fD4631B8cbD2D9fb0141f178e1Fe8";
+
+
+//  save the private key
+const PrivateKey1 = "DD7AD3794F09B77E19C994C5E4203A551D0E03DDA8B7D48624D0EFA64F234A56";
+
+// must convert private keys to a string of binary data with a Buffer
+const PrivateKey1Buffer = Buffer.from(PrivateKey1, 'hex');
+
+// set the contract address
+const contractAddress = "0x63Fa6C6A933F4fCC6aC17b5a73F0D3CFDeA55836";
+
+// set the contract abi
+const abi = [
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_addAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "getAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAmountA",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "addAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "subAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+
+// create the contract instance
+const contract = new web3.eth.Contract(abi, contractAddress);
+
+// build the transaction object
+// get the transaction nonce
+web3.eth.getTransactionCount(account, (err, txCount) => {
+
+    const txObject = {
+        nonce:    web3.utils.toHex(txCount),
+        gasLimit: web3.utils.toHex(800000),
+        gasPrice: web3.utils.toHex(web3.utils.toWei('10', 'gwei')),
+        to: contractAddress,
+        data: contract.methods.getAmount(22).encodeABI()
+    };
+
+    // sign the transaction
+    const tx = new Tx.Transaction(txObject, { chain: 'ropsten', hardfork: 'petersburg' });
+    tx.sign(PrivateKey1Buffer);
+
+    // serialize the transaction, convert it to a hex string, can be passed to Web3
+    const serializedTx = tx.serialize();
+    const raw = '0x' + serializedTx.toString('hex');
+
+    // send signed serialized transaction
+    web3.eth.sendSignedTransaction(raw, (err, txHash) => {
+        console.log("txHash: ", txHash);
+      });
+    
+  });
+
+  contract.methods.getAmount(22).call(function (err,result){
+    console.log("Getamount = ",result);
+});
+
+  
